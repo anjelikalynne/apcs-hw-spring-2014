@@ -79,6 +79,11 @@ public class QuickSort {
     }
     */
 
+    public int partition(int[] a, int L, int R){
+	int len = R - L - 1;
+	for (int i = 0; i < 
+    }
+
     public int[] toIntArray (ArrayList<Integer> a){
 	int[] ret = new int[a.size()];
 	for (int i = 0; i < a.size(); i++){
