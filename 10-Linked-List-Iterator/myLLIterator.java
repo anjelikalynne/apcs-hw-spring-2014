@@ -10,15 +10,22 @@ public class myLLIterator<E> implements Iterator<E>{
     }
     
     public boolean hasNext(){
+      	return currentNode != null;
+	/*
 	if (currentNode.getNext() == null)
 	    return false;
 	else{
 	    currentNode = currentNode.getNext();
 	    return true;
 	}
+	*/
     }
 
     public E next(){
+	E data = currentNode.getData();
+	currentNode = currentNode.getNext();
+	return data;
+	/*
 	if (hasNext()){
 	    calledNext = true;
 	    return currentNode.getNext();
@@ -26,6 +33,7 @@ public class myLLIterator<E> implements Iterator<E>{
 	else{
 	    throw new NoSuchElementException();
 	}
+	*/
     }
 
     public void remove(){
